@@ -1,42 +1,137 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+nav{
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.nav-center{
+  width: 90vw;
+  max-width: 150vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.logo{
+  text-transform: none;
+  color: white;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.toggle-btn{
+  width: 2rem;
+  height: 2rem;
+  background: whitesmoke;
+  color: lightyellow;
+  border-radius: 12px;
+  transition: all 2s ease;
+}
+
+.toggle-btn:hover{
+  transform: scale(1.05);
+}
+
+
+.hero-container{
+  display: grid;
+   min-height: calc(100vh - 5rem);
+   place-items: center;
+}
+
+.hero-center{
+  font-size: clamp(3rem, 5vw, 5rem);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.hero-center p{
+  line-height: 1.5;
+}
+
+
+@media screen and (min-width: 992px){
+  .hero-center{
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .hero-center p{
+    max-width: 35em;
+    margin: 0 auto;
+  }
+
+  .toggle-btn{
+    display: none;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
 }
 
-.card {
-  padding: 2em;
+.show-sidebar{
+  opacity: 1;
+  visibility: visible;
+   transition-property: opacity;
+   transition-duration: 1s;
 }
 
-.read-the-docs {
-  color: #888;
+.close-btn{
+  font-size: 2rem;
+  background: transparent;
+  color: navy;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
 }
+
+.sidebar article{
+  margin-bottom: 2rem;
+}
+
+.sidebar h4{
+  margin-bottom: 1rem;
+  color: lightseagreen;
+}
+
+.sidebar-sublinks{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 0.5rem;
+}
+
+.sidebar-sublinks a {
+  display: block;
+  color: grey;
+  text-transform: capitalize;
+}
+
+
+ @media screen and (min-width: 992px){
+   .sidebar{
+    display: none;
+   }
+  
+  
+  /*  .hero-center{
+      text-align: center;
+    }
+
+    .hero-center p{
+      max-width: 35em;
+      margin: 0 auto;
+    }
+
+    .toggle-btn {
+      display: none;
+  */  
+} 
