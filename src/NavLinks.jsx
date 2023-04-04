@@ -1,6 +1,7 @@
 import React from 'react'
 import { useGlobalContext } from './context';
-import { sublinks } from './data';
+import sublinks from './data';
+
 
 
 const NavLinks = () => {

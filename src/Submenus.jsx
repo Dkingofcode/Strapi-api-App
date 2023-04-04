@@ -11,6 +11,7 @@ const Submenus = () => {
   
   const handleMouseLeave = (event) => {
      const submenu = submenuContainer.current;
+     console.log(submenu);
      const {left, right, bottom} = submenu.getBoundingClientRect();
      const {clientX, clientY} = event; 
     //setPageId(null);
